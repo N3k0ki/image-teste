@@ -1,0 +1,182 @@
+:root {
+    --primary-blue: #1a4b77;
+    --secondary-blue: #2d7fc1;
+    --primary-orange: #ff7b25;
+    --light-orange: #ffa366;
+}
+
+*{
+    margin: 0;
+}
+
+.coral-form-container {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.coral-form {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.coral-form-title {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.coral-form-group {
+    margin-bottom: 20px;
+}
+
+.coral-form-group .form-label {
+    display: block;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.coral-form-group .form-input,
+.coral-form-group .form-select,
+.coral-form-group .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--secondary-blue);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.coral-form-group .form-input:focus,
+.coral-form-group .form-select:focus,
+.coral-form-group .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 8px rgba(255, 123, 37, 0.3);
+}
+
+.form-submit-btn {
+    background: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    background: var(--light-orange);
+    transform: translateY(-2px);
+}
+
+.form-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.coral-status {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.coral-status-option {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+}
+
+.coral-status-option .status-radio {
+    display: none;
+}
+
+.coral-status-option .status-label {
+    display: block;
+    padding: 8px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coral-status-option .status-radio:checked + .status-label {
+    background: var(--primary-orange);
+    color: white;
+}
+
+.coral-image-preview {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed var(--secondary-blue);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.coral-image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.coral-image-preview.empty {
+    background: #f8f9fa;
+    color: #6c757d;
+    font-size: 14px;
+    text-align: center;
+}
+
+.coral-file-upload {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--secondary-blue);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.coral-file-upload .file-input {
+    display: none;
+}
+
+.coral-success-message {
+    display: block;
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
